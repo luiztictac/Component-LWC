@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium" if:true={visible}>
+            <h1 class="slds-text-heading_large" style="text-align: center;">Olá Mundo!!!</h1>
+            <p>Gente que emoção!!!
+                To aprendendo LWC!!!
+            </p>
+
+            <h1 class="slds-text-heading_large" style="text-align: center;">Trazer dados da Classe</h1>
+            <div>
+                <p>Nome: {nome}</p>
+                <p>Telefone: {telefone}</p>
+                <p>CPF: {cpf}</p>
+                <p>Idade: {idade}</p>
+            </div>
+        </div>
+        <div class="slds-m-around_medium" if:false={visible}>
+            <h1 class="slds-text-heading_large" style="text-align: center;">Outros dados:</h1>
+            <p> Email: {email}</p>
+            <p> Instagram: <a href={instagram} target="_blank">Clique Aqui</a></p>
+            <p> LinkedIN: <a href={linkedin} target="_blank">Clique Aqui</a></p>
+        </div>
+        <lightning-button variant="brand" label="Trocar Div" title="Alterar Visible" onclick={trocarDiv}
+            class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="destructive" label="Alterar dados" title="Mudar os dados" onclick={trocarDados}
+            class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
+
+<!--
+	h1 -> Trazer dados da Classe
+
+
+	p-> Nome:
+	p-> Telefone:
+	p-> Cpf:
+	p-> Idade:
+-->
